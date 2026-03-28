@@ -1,40 +1,150 @@
-```html
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CR7 Elite | Unleash Your Inner Champion</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CR Elite Suit</title><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet"><style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #0b0b0b;
+    color: white;
+}
 
-        :root {
-            --primary-black: #0a0a0a;
-            --secondary-black: #1a1a1a;
-            --gold: #D4AF37;
-            --gold-dark: #B8962E;
-            --gray: #333333;
-            --white: #ffffff;
-            --shadow: 0 20px 60px rgba(0,0,0,0.5);
-            --shadow-hover: 0 30px 80px rgba(212,175,55,0.3);
-        }
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(to right, #000, #111);
+}
 
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: var(--white);
-            overflow-x: hidden;
-        }
+.hero h1 {
+    font-size: 55px;
+    color: gold;
+}
 
-        /* Header */
-        header {
-            position: fixed;
+.btn {
+    background: gold;
+    color: black;
+    padding: 15px 30px;
+    border: none;
+    margin-top: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* SECTIONS */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+img {
+    width: 300px;
+    border-radius: 15px;
+}
+
+/* OFFER */
+.offer {
+    background: #111;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 15px;
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    padding: 15px 20px;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+</style></head><body><section class="hero">
+    <div>
+        <h1>Be The Alpha</h1>
+        <p>Elite Suit Inspired By Champions</p>
+        <button class="btn" onclick="scrollToOffer()">Get Yours Now</button>
+    </div>
+</section><section class="section">
+    <h2>Why This Suit?</h2>
+    <p>Designed for confidence, power, and presence.</p>
+</section><section class="section">
+    <h2>Product</h2>
+    <img src="https://via.placeholder.com/300">
+    <p>Premium luxury suit - Slim fit - High quality fabric</p>
+</section><section class="offer" id="offer">
+    <h2>🔥 Limited Offer</h2>
+    <p>Only today: <span style="color:gold">$199</span></p>
+    <button class="btn" onclick="orderNow()">Order Now</button>
+</section><section class="section">
+    <h2>Testimonials</h2>
+    <p>"غيرت ستايلي بالكامل 🔥"</p>
+    <p>"فخامة وثقة 👌"</p>
+</section><a class="whatsapp" href="https://wa.me/967714515565" target="_blank">
+    اطلب عبر واتساب
+</a><script>
+function scrollToOffer() {
+    document.getElementById("offer").scrollIntoView({behavior: "smooth"});
+}
+
+function orderNow() {
+    window.location.href = "https://wa.me/967714515565?text=أريد طلب بدلة CR Elite";
+}
+</script></body>
+</html>}
+
+/* WHATSAPP BUTTON */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    padding: 15px 20px;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+</style></head><body><section class="hero">
+    <div>
+        <h1>Be The Alpha</h1>
+        <p>Elite Suit Inspired By Champions</p>
+        <button class="btn" onclick="scrollToOffer()">Get Yours Now</button>
+    </div>
+</section><section class="section">
+    <h2>Why This Suit?</h2>
+    <p>Designed for confidence, power, and presence.</p>
+</section><section class="section">
+    <h2>Product</h2>
+    <img src="https://via.placeholder.com/300">
+    <p>Premium luxury suit - Slim fit - High quality fabric</p>
+</section><section class="offer" id="offer">
+    <h2>🔥 Limited Offer</h2>
+    <p>Only today: <span style="color:gold">$199</span></p>
+    <button class="btn" onclick="orderNow()">Order Now</button>
+</section><section class="section">
+    <h2>Testimonials</h2>
+    <p>"غيرت ستايلي بالكامل 🔥"</p>
+    <p>"فخامة وثقة 👌"</p>
+</section><a class="whatsapp" href="https://wa.me/XXXXXXXXXX" target="_blank">
+    اطلب عبر واتساب
+</a><script>
+function scrollToOffer() {
+    document.getElementById("offer").scrollIntoView({behavior: "smooth"});
+}
+
+function orderNow() {
+    window.location.href = "https://wa.me/XXXXXXXXXX?text=أريد طلب بدلة CR Elite";
+}
+</script></body>
+</html>            position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
