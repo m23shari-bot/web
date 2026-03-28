@@ -1,40 +1,44 @@
-<section class="offer-section" id="offer">
-    <h2>🔥 عرض محدود</h2><div class="offer-price">$199</div>
-<p style="font-size: 1.5rem; margin-bottom: 2rem;">
-    ادفع الآن عبر USDT (TRC20)
-</p>
+Build a single, complete, and professionally designed HTML file for a luxury landing page to sell "The Cristiano Ronaldo Digital Suit". Use Tailwind CSS (via CDN) and plain JavaScript. The entire user interface, content, and marketing copy must be in high-quality Arabic (اللغة العربية).
 
-<!-- Wallet -->
-<div style="background:#111;padding:20px;border-radius:15px;margin-bottom:20px;">
-    <p style="color:gold;">عنوان المحفظة:</p>
-    <p id="wallet" style="word-break:break-all;">
-    TRSf1jCUZ3yFjAKER3o5GEKPXxV4FPa7No
-    </p>
-    <button onclick="copyWallet()" class="cta-hero" style="margin-top:10px;">
-        نسخ العنوان
-    </button>
-</div>
+### Design Aesthetic:
+- High-end luxury fashion boutique feel.
+- Pure black background (#000000), metallic gold (#D4AF37) accents, and white text for high contrast.
+- Fully mobile-responsive and Right-to-Left (RTL) layout.
+- Use an elegant Arabic Serif font for headers and a clean Sans-serif for body text.
 
-<!-- Payment Form -->
-<div style="background:#111;padding:20px;border-radius:15px;">
-    <h3 style="color:gold;">تأكيد الدفع</h3>
+### Structure and Content (All in Arabic):
 
-    <input type="text" id="name" placeholder="اسمك"
-    style="width:100%;padding:10px;margin:10px 0;">
+#### 1. Hero Section:
+- Include a stylized placeholder or AI-generated image of a luxury bespoke black suit with a "CR7" inspired feel.
+- Headline: "الاستحواذ على الأسطورة: بدلة كريستيانو رونالدو الرقمية الحصرية"
+- Sub-headline (Marketing Copy): "تملّك قطعة لا تُقدر بثمن، تجسد أناقة الانتصار وإرث أعظم لاعب في التاريخ. تصميم فريد من نوعه (1-of-1) صُنع للنخبة، يدمج بين فخامة الخياطة الراقية ومستقبل الأصول الرقمية الموثقة."
+- Button: "ابدأ عملية الاستحواذ الآن" (scrolls to payment).
 
-    <input type="text" id="txid" placeholder="رقم العملية (TXID)"
-    style="width:100%;padding:10px;margin:10px 0;">
+#### 2. Exclusive Features Section:
+- Use three styled cards with icons:
+    - Card 1: "ندرة مطلقة" (نسخة وحيدة، غير قابلة للتكرار، موثقة عبر البلوكشين).
+    - Card 2: "تصميم أسطوري" (مستوحى من لحظات التتويج التاريخية للدون، تفاصيل ذهبية محاكة بدقة).
+    - Card 3: "استثمار النخبة" (أصل رقمي فاخر لجامعي المقتنيات النادرة والمستثمرين).
 
-    <button onclick="submitOrder()" class="cta-order">
-        تأكيد الطلب
-    </button>
-</div>
+#### 3. Secure Payment Section:
+- Styled box with a prominent "Verified Security" feel.
+- Content: "لإتمام عملية الشراء الآمنة ونقل الملكية، يرجى تحويل المبلغ المتفق عليه إلى العنوان المعتمد أدناه عبر شبكة **USDT-trc20**."
+- Network Title: "شبكة الإيداع المعتمدة: USDT-trc20"
+- Wallet Label: "عنوان المحفظة الرسمي:"
+- Wallet Address: `TRSf1jCUZ3yFjAKER3o5GEKPXxV4FPa7No` (Display this in a bold, styled monospace font).
+- **CRITICAL**: Include a fully functional "نسخ العنوان" button next to the address using simple JavaScript to copy the wallet address to the clipboard.
 
-<div id="result" style="margin-top:15px;color:gold;"></div>
+#### 4. Transaction Verification Form:
+- Headline: "تأكيد عملية النقل"
+- Brief Instruction: "بعد إتمام التحويل، املأ البيانات لإصدار شهادة الملكية."
+- Input Fields: [الاسم الكامل / المستعار، معرف المعاملة (TxID)، وسيلة تواصل مفضلة].
+- Button: "إرسال بيانات التحويل لبدء النقل"
 
-</section><script>
-function copyWallet() {
-    const wallet = document.getElementById("wallet").innerText;
+#### 5. Footer:
+- Content: "حقوق الملكية محفوظة © 2026 - Vision-Landing-Pro"
+
+### Blackbox Output Request:
+Provide the complete, bug-free HTML/CSS/JS code in a single copyable block.    const wallet = document.getElementById("wallet").innerText;
     navigator.clipboard.writeText(wallet);
     alert("تم نسخ عنوان المحفظة");
 }
