@@ -2,39 +2,366 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بدلة كريستيانو رونالدو الرقمية الحصرية</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>كريستيانو رونالدو | البدلة الرقمية الحصرية</title>
+    <!-- Tailwind CSS v2 CDN + Custom Luxury Overrides -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Google Fonts: Arabic + English Elegance -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Cairo', 'Segoe UI', system-ui, sans-serif;
+        }
+        body {
+            background-color: #000000;
+            scroll-behavior: smooth;
+        }
+        /* Luxury gold accents & glow effects */
+        .gold-border {
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+            transition: all 0.4s ease;
+        }
+        .gold-border:hover {
+            border-color: #D4AF37;
+            box-shadow: 0 0 35px rgba(212, 175, 55, 0.4);
+        }
+        .gold-glow {
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+        }
+        .gold-button {
+            background: linear-gradient(135deg, #D4AF37 0%, #B38F2A 100%);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+        .gold-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 25px rgba(212, 175, 55, 0.5);
+            filter: brightness(1.05);
+        }
+        .card-luxury {
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(2px);
+            border-bottom: 2px solid #D4AF37;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-luxury:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 35px -12px rgba(212, 175, 55, 0.25);
+        }
+        .gold-text {
+            color: #D4AF37;
+        }
+        .bg-gold-pattern {
+            background-image: radial-gradient(circle at 10% 20%, rgba(212, 175, 55, 0.03) 0%, transparent 60%);
+        }
+        .input-luxury {
+            background-color: #0a0a0a;
+            border: 1px solid #2a2a2a;
+            transition: all 0.2s;
+            color: white;
+        }
+        .input-luxury:focus {
+            border-color: #D4AF37;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+        }
+        .copy-toast {
+            transition: opacity 0.25s ease;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+            background: #0a0a0a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+            border-radius: 8px;
+        }
+        /* RTL fine-tune for Tailwind text alignment */
+        [dir="rtl"] .text-left {
+            text-align: right;
+        }
+        .placeholder-gold::placeholder {
+            color: #5a5a5a;
+            font-weight: 300;
+        }
+    </style>
+</head>
+<body class="bg-black text-white bg-gold-pattern">
+
+    <!-- MAIN CONTAINER -->
+    <main class="max-w-7xl mx-auto px-5 md:px-8 py-6 md:py-10">
+
+        <!-- HERO SECTION -->
+        <section id="hero" class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 mb-24 mt-6">
+            <!-- Large Image Placeholder: Luxury Suit SVG (digital masterpiece) -->
+            <div class="w-full lg:w-1/2 flex justify-center">
+                <div class="relative w-full max-w-md md:max-w-lg rounded-2xl gold-border overflow-hidden bg-gradient-to-br from-gray-900 to-black p-1">
+                    <div class="bg-black rounded-2xl p-6 flex flex-col items-center justify-center aspect-square">
+                        <svg viewBox="0 0 400 400" class="w-full h-auto drop-shadow-2xl">
+                            <defs>
+                                <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#D4AF37" />
+                                    <stop offset="100%" stop-color="#AA8C2E" />
+                                </linearGradient>
+                                <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                                    <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
+                                    <feMerge>
+                                        <feMergeNode in="offsetblur" />
+                                        <feMergeNode in="SourceGraphic" />
+                                    </feMerge>
+                                </filter>
+                            </defs>
+                            <!-- Jacket Base -->
+                            <rect x="120" y="120" width="160" height="180" rx="20" fill="none" stroke="url(#goldGrad)" stroke-width="2.5" stroke-dasharray="6 4"/>
+                            <!-- Lapel & Luxury Details -->
+                            <path d="M150 140 L200 190 L250 140" stroke="#D4AF37" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                            <path d="M170 190 L200 230 L230 190" stroke="#D4AF37" stroke-width="2" fill="none"/>
+                            <circle cx="200" cy="260" r="18" stroke="#D4AF37" stroke-width="2" fill="none"/>
+                            <text x="200" y="310" text-anchor="middle" fill="#D4AF37" font-size="24" font-weight="bold" font-family="monospace">CR7</text>
+                            <text x="200" y="345" text-anchor="middle" fill="#D4AF37" font-size="12" opacity="0.8">1/1 DIGITAL SUIT</text>
+                            <!-- Shoulder Epaulets -->
+                            <line x1="120" y1="125" x2="150" y2="115" stroke="#D4AF37" stroke-width="2"/>
+                            <line x1="280" y1="125" x2="250" y2="115" stroke="#D4AF37" stroke-width="2"/>
+                            <path d="M135 100 L200 110 L265 100" stroke="url(#goldGrad)" stroke-width="2" fill="none" opacity="0.8"/>
+                        </svg>
+                        <p class="text-gold-text text-xs tracking-wider mt-2 font-light">CR7 | الأيقونة الخالدة</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Hero Text -->
+            <div class="w-full lg:w-1/2 text-center lg:text-right">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight bg-gradient-to-r from-white via-white to-gold-text bg-clip-text text-transparent drop-shadow-lg">
+                    الاستحواذ على الأسطورة:<br> 
+                    <span class="text-gold-text">بدلة كريستيانو رونالدو الرقمية الحصرية</span>
+                </h1>
+                <p class="text-gray-300 text-lg md:text-xl mt-6 leading-relaxed border-r-4 border-gold-text pr-5">
+                    تحفة رقمية فريدة من نوعها تجمع بين الأناقة العالمية ومستقبل الملكية الرقمية. صُممت خصيصًا لهواة الجمع من النخبة.
+                </p>
+                <div class="mt-10">
+                    <button id="scrollToPaymentBtn" class="gold-button text-black font-bold py-4 px-8 rounded-full text-lg tracking-wide transition-all duration-300 shadow-2xl">
+                        اقتنِ القطعة الآن
+                    </button>
+                </div>
+                <div class="mt-8 flex justify-center lg:justify-start gap-6 text-gold-text">
+                    <div class="flex items-center gap-2"><span class="w-2 h-2 bg-gold-text rounded-full"></span> إصدار أسطوري</div>
+                    <div class="flex items-center gap-2"><span class="w-2 h-2 bg-gold-text rounded-full"></span> بلوكتشين آمن</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RARITY FEATURES (3 Cards) -->
+        <section class="mb-28">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold inline-block border-b-2 border-gold-text pb-2">سمات الندرة الحصرية</h2>
+                <p class="text-gray-400 mt-4">ما يجعل هذه البدلة الرقمية أيقونة فريدة في عالم الـ luxury digital assets</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1: Absolute Rarity -->
+                <div class="card-luxury rounded-2xl p-6 text-center transition-all bg-black bg-opacity-70 backdrop-blur-sm">
+                    <div class="flex justify-center mb-5">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L15 8.5L22 9.5L17 14L18.5 21L12 17.5L5.5 21L7 14L2 9.5L9 8.5L12 2Z" stroke="#D4AF37" stroke-width="1.8" fill="none"/>
+                            <text x="12" y="19" text-anchor="middle" fill="#D4AF37" font-size="8" font-weight="bold">1</text>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gold-text mb-3">الندرة المطلقة</h3>
+                    <p class="text-gray-300 leading-relaxed">قطعة واحدة فقط في العالم (1-of-1) مما يجعلك المالك الوحيد لهذا الإرث الرقمي المرتبط بأسطورة كرة القدم.</p>
+                </div>
+                <!-- Card 2: Legendary Design -->
+                <div class="card-luxury rounded-2xl p-6 text-center transition-all bg-black bg-opacity-70 backdrop-blur-sm">
+                    <div class="flex justify-center mb-5">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L15 8.5L22 9.5L17 14L18.5 21L12 17.5L5.5 21L7 14L2 9.5L9 8.5L12 2Z" stroke="#D4AF37" stroke-width="1.8" fill="none"/>
+                            <circle cx="12" cy="12" r="3" stroke="#D4AF37" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gold-text mb-3">التصميم الأسطوري</h3>
+                    <p class="text-gray-300 leading-relaxed">مستوحى من إرث كريستيانو رونالدو الأسطوري، يجمع بين الأناقة العصرية والتفاصيل المستوحاة من مسيرته الذهبية.</p>
+                </div>
+                <!-- Card 3: Secure Verification -->
+                <div class="card-luxury rounded-2xl p-6 text-center transition-all bg-black bg-opacity-70 backdrop-blur-sm">
+                    <div class="flex justify-center mb-5">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L3 7L12 12L21 7L12 2Z" stroke="#D4AF37" stroke-width="1.8" fill="none"/>
+                            <path d="M3 12L12 17L21 12" stroke="#D4AF37" stroke-width="1.8" fill="none"/>
+                            <path d="M3 17L12 22L21 17" stroke="#D4AF37" stroke-width="1.8" fill="none"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gold-text mb-3">التحقق الآمن</h3>
+                    <p class="text-gray-300 leading-relaxed">معتمد على تقنية البلوكتشين، ضمان أصالة لا جدال فيه مع توثيق ذكي للملكية الرقمية للأبد.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAYMENT CENTER (CRITICAL) + Transaction Verification Form -->
+        <section id="payment" class="mb-28 scroll-mt-24">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <!-- Secure Payment Box -->
+                <div class="gold-border rounded-2xl bg-black bg-opacity-80 p-6 md:p-8 backdrop-blur-sm transition-all">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="text-gold-text text-2xl">🔒</span>
+                        <h3 class="text-2xl md:text-3xl font-bold text-gold-text">مركز الدفع الآمن</h3>
+                    </div>
+                    <div class="h-px w-full bg-gradient-to-r from-transparent via-gold-text to-transparent my-5"></div>
+                    
+                    <div class="mb-6">
+                        <p class="text-gray-300 text-sm uppercase tracking-wider">شبكة الإيداع المعتمدة:</p>
+                        <p class="text-xl font-mono font-bold text-white bg-gray-900 inline-block px-4 py-2 rounded-lg mt-1 gold-glow">USDT-trc20</p>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <p class="text-gray-300 mb-2">عنوان المحفظة الرسمي المعتمد:</p>
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 bg-gray-900 p-4 rounded-xl border border-gray-800">
+                            <code class="text-sm md:text-base break-all font-mono text-gold-text" id="walletAddress">TRSf1jCUZ3yFjAKER3o5GEKPXxV4FPa7No</code>
+                            <button id="copyWalletBtn" class="gold-button text-black font-bold py-2 px-5 rounded-lg text-sm transition-all flex items-center justify-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+                                نسخ العنوان
+                            </button>
+                        </div>
+                        <div id="copyFeedback" class="text-gold-text text-sm mt-2 opacity-0 transition-opacity duration-300">✅ تم النسخ!</div>
+                    </div>
+                    <div class="bg-gray-900 bg-opacity-50 rounded-xl p-3 text-center text-xs text-gray-400 flex items-center justify-center gap-2">
+                        <span>✔</span> معاملات مشفرة بالكامل | دعم فوري على مدار الساعة
+                    </div>
+                </div>
+
+                <!-- Transaction Verification Form (Gold Styled) -->
+                <div class="gold-border rounded-2xl bg-black bg-opacity-80 p-6 md:p-8 backdrop-blur-sm">
+                    <h3 class="text-2xl font-bold text-gold-text mb-1 flex items-center gap-2">✍️ تأكيد الدفع</h3>
+                    <p class="text-gray-400 text-sm mb-6">أدخل تفاصيل التحويل لإتمام عملية الاستحواذ على البدلة الأسطورية</p>
+                    <form id="verificationForm">
+                        <div class="mb-5">
+                            <label class="block text-gray-200 mb-2 font-semibold">الاسم الكامل</label>
+                            <input type="text" id="fullName" required class="input-luxury w-full rounded-xl p-3 placeholder-gray-500 placeholder-gold" placeholder="مثال: أحمد المنصور">
+                        </div>
+                        <div class="mb-5">
+                            <label class="block text-gray-200 mb-2 font-semibold">معرف المعاملة (TxID)</label>
+                            <input type="text" id="txid" required class="input-luxury w-full rounded-xl p-3 placeholder-gray-500 placeholder-gold" placeholder="أدخل TxID من محفظة USDT">
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-200 mb-2 font-semibold">وسيلة التواصل</label>
+                            <input type="text" id="contactMethod" required class="input-luxury w-full rounded-xl p-3 placeholder-gray-500 placeholder-gold" placeholder="تيليجرام / البريد الإلكتروني">
+                        </div>
+                        <button type="submit" class="gold-button w-full text-black font-bold py-3 rounded-xl text-lg tracking-wide transition-all flex justify-center items-center gap-2">
+                            تأكيد إرسال الدفع
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                        </button>
+                    </form>
+                    <p class="text-xs text-gray-500 mt-4 text-center">سيتم التواصل خلال 24 ساعة لتأكيد ملكية البدلة الفريدة</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="border-t border-gray-800 pt-8 mt-12 text-center text-gray-400 text-sm">
+            <p>حقوق الملكية محفوظة © 2026 - Vision-Landing-Pro</p>
+            <p class="mt-2 text-gold-text text-xs tracking-wider">CR7 DIGITAL SUIT | THE LEGEND LIVES ON-CHAIN</p>
+        </footer>
+    </main>
+
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'arabic-serif': ['Amiri', 'serif'],
-                        'arabic-sans': ['Cairo', 'sans-serif'],
-                    },
-                    colors: {
-                        'gold-lux': '#D4AF37',
-                        'black-pure': '#000000',
+        (function() {
+            // 1. COPY ADDRESS FUNCTIONALITY (bug-free + mobile)
+            const copyBtn = document.getElementById('copyWalletBtn');
+            const walletAddrSpan = document.getElementById('walletAddress');
+            const feedbackDiv = document.getElementById('copyFeedback');
+            const addressText = "TRSf1jCUZ3yFjAKER3o5GEKPXxV4FPa7No";
+            
+            async function copyToClipboard() {
+                try {
+                    await navigator.clipboard.writeText(addressText);
+                    // visual feedback
+                    feedbackDiv.classList.remove('opacity-0');
+                    feedbackDiv.classList.add('opacity-100');
+                    setTimeout(() => {
+                        feedbackDiv.classList.remove('opacity-100');
+                        feedbackDiv.classList.add('opacity-0');
+                    }, 1800);
+                } catch (err) {
+                    // fallback for older browsers
+                    const textarea = document.createElement('textarea');
+                    textarea.value = addressText;
+                    document.body.appendChild(textarea);
+                    textarea.select();
+                    const success = document.execCommand('copy');
+                    document.body.removeChild(textarea);
+                    if(success) {
+                        feedbackDiv.classList.remove('opacity-0');
+                        feedbackDiv.classList.add('opacity-100');
+                        setTimeout(() => {
+                            feedbackDiv.classList.remove('opacity-100');
+                            feedbackDiv.classList.add('opacity-0');
+                        }, 1800);
+                    } else {
+                        alert("تعذر النسخ، الرجاء النسخ يدويًا");
                     }
                 }
             }
-        }
+            if(copyBtn) copyBtn.addEventListener('click', copyToClipboard);
+            
+            // 2. SMOOTH SCROLL TO PAYMENT SECTION
+            const scrollBtn = document.getElementById('scrollToPaymentBtn');
+            const paymentSection = document.getElementById('payment');
+            if(scrollBtn && paymentSection) {
+                scrollBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    paymentSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                });
+            }
+            
+            // 3. TRANSACTION VERIFICATION FORM HANDLER (luxury alert simulation)
+            const form = document.getElementById('verificationForm');
+            if(form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const fullName = document.getElementById('fullName')?.value.trim();
+                    const txid = document.getElementById('txid')?.value.trim();
+                    const contact = document.getElementById('contactMethod')?.value.trim();
+                    
+                    if(!fullName || !txid || !contact) {
+                        // custom elegant notification
+                        showNotification("يرجى ملء جميع الحقول قبل التأكيد", "error");
+                        return;
+                    }
+                    
+                    // Simulate secure submission (front-end demonstration)
+                    showNotification(`✅ شكراً ${fullName}، تم استلام طلبك بنجاح. سيتم التواصل معك قريباً لتأكيد ملكية البدلة الرقمية الحصرية.`, "success");
+                    // Optional: clear form or just reset (keep for demonstration)
+                    // form.reset();
+                });
+            }
+            
+            // Elegant toast notification (luxury gold style)
+            function showNotification(message, type = "success") {
+                // Create floating toast
+                const toast = document.createElement('div');
+                toast.className = `fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 px-6 py-3 rounded-xl shadow-2xl text-white font-bold transition-all duration-500 flex items-center gap-3 backdrop-blur-md border-r-4 ${type === 'success' ? 'border-gold-text bg-black bg-opacity-90' : 'border-red-500 bg-black bg-opacity-90'}`;
+                toast.style.direction = 'rtl';
+                const icon = type === 'success' ? '✨' : '⚠️';
+                toast.innerHTML = `<span class="text-xl">${icon}</span><span class="text-gold-text">${message}</span>`;
+                document.body.appendChild(toast);
+                setTimeout(() => {
+                    toast.style.opacity = '0';
+                    setTimeout(() => toast.remove(), 400);
+                }, 3800);
+            }
+            
+            // Optional: Adding subtle gold animation to wallet address on load
+            const walletElement = document.getElementById('walletAddress');
+            if(walletElement) {
+                walletElement.addEventListener('click', () => copyToClipboard());
+                walletElement.style.cursor = 'pointer';
+                walletElement.title = 'انقر لنسخ العنوان';
+            }
+            
+            // RTL confirmation for all Tailwind (explicit alignment)
+            // No extra needed, but ensures mobile copy works on all touch devices
+        })();
     </script>
-    <style>
-        body {
-            font-family: 'Cairo', sans-serif;
-            background: #000000;
-            color: #ffffff;
-            overflow-x: hidden;
-        }
-        .hero-gradient {
-            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(0,0,0,0.95) 50%);
-        }
-        .gold-glow {
-            text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+    <!-- Ensure all content is RTL-compatible and form fields respect arabic input -->
+</body>
+</html>            text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
         }
         .card-hover {
             transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
