@@ -1,40 +1,270 @@
-Build a single, complete, and professionally designed HTML file for a luxury landing page to sell "The Cristiano Ronaldo Digital Suit". Use Tailwind CSS (via CDN) and plain JavaScript. The entire user interface, content, and marketing copy must be in high-quality Arabic (اللغة العربية).
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بدلة كريستيانو رونالدو الرقمية الحصرية</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'arabic-serif': ['Amiri', 'serif'],
+                        'arabic-sans': ['Cairo', 'sans-serif'],
+                    },
+                    colors: {
+                        'gold-lux': '#D4AF37',
+                        'black-pure': '#000000',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: #000000;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(0,0,0,0.95) 50%);
+        }
+        .gold-glow {
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+        }
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(212, 175, 55, 0.3);
+        }
+        .wallet-address {
+            font-family: 'Courier New', monospace;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-black-pure text-white">
 
-### Design Aesthetic:
-- High-end luxury fashion boutique feel.
-- Pure black background (#000000), metallic gold (#D4AF37) accents, and white text for high contrast.
-- Fully mobile-responsive and Right-to-Left (RTL) layout.
-- Use an elegant Arabic Serif font for headers and a clean Sans-serif for body text.
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center px-4 py-20 hero-gradient relative overflow-hidden">
+        <div class="text-center max-w-4xl mx-auto relative z-10">
+            <!-- Background Suit Image -->
+            <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20" 
+                 style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')"></div>
+            
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-arabic-serif font-bold mb-8 gold-glow leading-tight">
+                الاستحواذ على الأسطورة
+            </h1>
+            <p class="text-xl md:text-2xl lg:text-3xl font-arabic-serif font-light mb-12 max-w-3xl mx-auto leading-relaxed px-4">
+                بدلة كريستيانو رونالدو الرقمية الحصرية
+            </p>
+            <p class="text-lg md:text-xl mb-12 max-w-2xl mx-auto opacity-90 leading-relaxed px-4">
+                تملّك قطعة لا تُقدر بثمن، تجسد أناقة الانتصار وإرث أعظم لاعب في التاريخ. 
+                تصميم فريد من نوعه (1-of-1) صُنع للنخبة، يدمج بين فخامة الخياطة الراقية 
+                ومستقبل الأصول الرقمية الموثقة.
+            </p>
+            <a href="#payment" class="inline-block bg-gradient-to-l from-gold-lux to-yellow-500 text-black px-12 py-6 rounded-full text-xl font-bold hover:shadow-2xl hover:scale-105 transition-all duration-300 font-arabic-sans uppercase tracking-wide">
+                ابدأ عملية الاستحواذ الآن
+                <i class="fas fa-crown ml-3"></i>
+            </a>
+        </div>
+    </section>
 
-### Structure and Content (All in Arabic):
+    <!-- Exclusive Features -->
+    <section class="py-32 px-4 md:px-8 lg:px-16">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl md:text-6xl font-arabic-serif font-bold text-center mb-24 gold-glow">مميزات حصرية</h2>
+            <div class="grid md:grid-cols-3 gap-12">
+                <!-- Card 1 -->
+                <div class="card-hover group bg-gradient-to-b from-black-pure/50 to-black-pure/20 backdrop-blur-xl border border-gold-lux/30 rounded-3xl p-12 text-center hover:border-gold-lux animate-fadeInUp">
+                    <div class="w-24 h-24 bg-gold-lux/10 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:bg-gold-lux/20 transition-all duration-300">
+                        <i class="fas fa-gem text-4xl text-gold-lux group-hover:rotate-12 transition-all duration-500"></i>
+                    </div>
+                    <h3 class="text-2xl md:text-3xl font-arabic-serif font-bold mb-6 gold-glow">ندرة مطلقة</h3>
+                    <p class="text-lg opacity-90 leading-relaxed">
+                        نسخة وحيدة، غير قابلة للتكرار، موثقة عبر البلوكشين لضمان الأصالة الأبدية
+                    </p>
+                </div>
 
-#### 1. Hero Section:
-- Include a stylized placeholder or AI-generated image of a luxury bespoke black suit with a "CR7" inspired feel.
-- Headline: "الاستحواذ على الأسطورة: بدلة كريستيانو رونالدو الرقمية الحصرية"
-- Sub-headline (Marketing Copy): "تملّك قطعة لا تُقدر بثمن، تجسد أناقة الانتصار وإرث أعظم لاعب في التاريخ. تصميم فريد من نوعه (1-of-1) صُنع للنخبة، يدمج بين فخامة الخياطة الراقية ومستقبل الأصول الرقمية الموثقة."
-- Button: "ابدأ عملية الاستحواذ الآن" (scrolls to payment).
+                <!-- Card 2 -->
+                <div class="card-hover group bg-gradient-to-b from-black-pure/50 to-black-pure/20 backdrop-blur-xl border border-gold-lux/30 rounded-3xl p-12 text-center hover:border-gold-lux animate-fadeInUp animation-delay-200">
+                    <div class="w-24 h-24 bg-gold-lux/10 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:bg-gold-lux/20 transition-all duration-300">
+                        <i class="fas fa-trophy text-4xl text-gold-lux group-hover:rotate-12 transition-all duration-500"></i>
+                    </div>
+                    <h3 class="text-2xl md:text-3xl font-arabic-serif font-bold mb-6 gold-glow">تصميم أسطوري</h3>
+                    <p class="text-lg opacity-90 leading-relaxed">
+                        مستوحى من لحظات التتويج التاريخية للدون، تفاصيل ذهبية محاكاة بدقة فائقة
+                    </p>
+                </div>
 
-#### 2. Exclusive Features Section:
-- Use three styled cards with icons:
-    - Card 1: "ندرة مطلقة" (نسخة وحيدة، غير قابلة للتكرار، موثقة عبر البلوكشين).
-    - Card 2: "تصميم أسطوري" (مستوحى من لحظات التتويج التاريخية للدون، تفاصيل ذهبية محاكة بدقة).
-    - Card 3: "استثمار النخبة" (أصل رقمي فاخر لجامعي المقتنيات النادرة والمستثمرين).
+                <!-- Card 3 -->
+                <div class="card-hover group bg-gradient-to-b from-black-pure/50 to-black-pure/20 backdrop-blur-xl border border-gold-lux/30 rounded-3xl p-12 text-center hover:border-gold-lux animate-fadeInUp animation-delay-400">
+                    <div class="w-24 h-24 bg-gold-lux/10 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:bg-gold-lux/20 transition-all duration-300">
+                        <i class="fas fa-chart-line text-4xl text-gold-lux group-hover:rotate-12 transition-all duration-500"></i>
+                    </div>
+                    <h3 class="text-2xl md:text-3xl font-arabic-serif font-bold mb-6 gold-glow">استثمار النخبة</h3>
+                    <p class="text-lg opacity-90 leading-relaxed">
+                        أصل رقمي فاخر لجامعي المقتنيات النادرة والمستثمرين في المستقبل
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-#### 3. Secure Payment Section:
-- Styled box with a prominent "Verified Security" feel.
-- Content: "لإتمام عملية الشراء الآمنة ونقل الملكية، يرجى تحويل المبلغ المتفق عليه إلى العنوان المعتمد أدناه عبر شبكة **USDT-trc20**."
-- Network Title: "شبكة الإيداع المعتمدة: USDT-trc20"
-- Wallet Label: "عنوان المحفظة الرسمي:"
-- Wallet Address: `TRSf1jCUZ3yFjAKER3o5GEKPXxV4FPa7No` (Display this in a bold, styled monospace font).
-- **CRITICAL**: Include a fully functional "نسخ العنوان" button next to the address using simple JavaScript to copy the wallet address to the clipboard.
+    <!-- Secure Payment Section -->
+    <section id="payment" class="py-32 px-4 md:px-8 lg:px-16 bg-gradient-to-b from-black-pure to-black-pure/50">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-gradient-to-br from-gold-lux/5 via-black-pure/50 to-black-pure/80 backdrop-blur-2xl border-2 border-gold-lux/30 rounded-3xl p-12 md:p-20 shadow-2xl">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-6xl font-arabic-serif font-bold mb-6 gold-glow">الدفع الآمن</h2>
+                    <div class="inline-flex items-center bg-green-500/20 border-2 border-green-500/50 px-6 py-3 rounded-full text-sm font-bold text-green-400">
+                        <i class="fas fa-shield-alt mr-2"></i>
+                        تم التحقق من الأمان
+                    </div>
+                </div>
 
-#### 4. Transaction Verification Form:
-- Headline: "تأكيد عملية النقل"
-- Brief Instruction: "بعد إتمام التحويل، املأ البيانات لإصدار شهادة الملكية."
-- Input Fields: [الاسم الكامل / المستعار، معرف المعاملة (TxID)، وسيلة تواصل مفضلة].
-- Button: "إرسال بيانات التحويل لبدء النقل"
+                <div class="space-y-8">
+                    <div class="text-center">
+                        <p class="text-xl md:text-2xl mb-8 opacity-90 leading-relaxed">
+                            لإتمام عملية الشراء الآمنة ونقل الملكية، يرجى تحويل المبلغ المتفق عليه 
+                            إلى العنوان المعتمد أدناه عبر شبكة <span class="font-bold text-gold-lux">USDT-trc20</span>
+                        </p>
+                        
+                        <div class="bg-gradient-to-r from-green-500/10 to-emerald-500/10 border-2 border-green-500/30 rounded-2xl p-8">
+                            <h3 class="text-2xl font-bold mb-4 font-arabic-serif text-green-400">شبكة الإيداع المعتمدة</h3>
+                            <p class="text-3xl font-bold text-green-400 mb-2">USDT-trc20</p>
+                            <div class="flex flex-col lg:flex-row items-center gap-4 justify-center">
+                                <div class="wallet-address px-6 py-4 rounded-xl text-lg font-mono break-all bg-black/50 border border-gold-lux/50 min-w-[300px] text-center">
+                                    TRSf1jCUZ3yFjAKER3o5GEKPXxV4FPa7No
+                                </div>
+                                <button id="copyWallet" class="bg-gold-lux hover:bg-yellow-500 text-black px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2">
+                                    <i class="fas fa-copy"></i>
+                                    نسخ العنوان
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-#### 5. Footer:
+    <!-- Transaction Verification -->
+    <section class="py-32 px-4 md:px-8 lg:px-16">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-arabic-serif font-bold text-center mb-12 gold-glow">تأكيد عملية النقل</h2>
+            <p class="text-xl text-center mb-16 opacity-90 leading-relaxed">
+                بعد إتمام التحويل، املأ البيانات لإصدار شهادة الملكية الرقمية
+            </p>
+            
+            <form id="verificationForm" class="space-y-6 bg-black-pure/50 backdrop-blur-xl border border-gold-lux/30 rounded-3xl p-12">
+                <div>
+                    <label class="block text-lg font-semibold mb-3">الاسم الكامل / المستعار</label>
+                    <input type="text" required class="w-full px-6 py-4 bg-black/50 border-2 border-gold-lux/30 rounded-xl text-lg focus:border-gold-lux focus:outline-none transition-all duration-300" placeholder="أدخل اسمك الكامل">
+                </div>
+                
+                <div>
+                    <label class="block text-lg font-semibold mb-3">معرف المعاملة (TxID)</label>
+                    <input type="text" required class="w-full px-6 py-4 bg-black/50 border-2 border-gold-lux/30 rounded-xl text-lg focus:border-gold-lux focus:outline-none transition-all duration-300 font-mono" placeholder="مثال: abc123def456...">
+                </div>
+                
+                <div>
+                    <label class="block text-lg font-semibold mb-3">وسيلة تواصل مفضلة</label>
+                    <input type="text" required class="w-full px-6 py-4 bg-black/50 border-2 border-gold-lux/30 rounded-xl text-lg focus:border-gold-lux focus:outline-none transition-all duration-300" placeholder="واتساب / تليجرام / بريد إلكتروني">
+                </div>
+                
+                <button type="submit" class="w-full bg-gradient-to-l from-gold-lux to-yellow-500 text-black py-6 px-8 rounded-2xl text-2xl font-bold uppercase tracking-wide hover:shadow-2xl hover:scale-105 transition-all duration-300 shadow-xl">
+                    إرسال بيانات التحويل لبدء النقل
+                    <i class="fas fa-rocket ml-3"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 text-center border-t border-gold-lux/20">
+        <p class="text-xl opacity-75 font-arabic-serif">حقوق الملكية محفوظة © 2026 - Vision-Landing-Pro</p>
+    </footer>
+
+    <script>
+        // Copy Wallet Address
+        const copyBtn = document.getElementById('copyWallet');
+        const walletAddress = 'TRSf1jCUZ3yFjAKER3o5GEKPXxV4FPa7No';
+
+        copyBtn.addEventListener('click', async () => {
+            try {
+                await navigator.clipboard.writeText(walletAddress);
+                const originalText = copyBtn.innerHTML;
+                copyBtn.innerHTML = '<i class="fas fa-check"></i> تم النسخ!';
+                copyBtn.classList.add('bg-green-500', 'text-white');
+                copyBtn.classList.remove('bg-gold-lux', 'text-black');
+                
+                setTimeout(() => {
+                    copyBtn.innerHTML = originalText;
+                    copyBtn.classList.remove('bg-green-500', 'text-white');
+                    copyBtn.classList.add('bg-gold-lux', 'text-black');
+                }, 2000);
+            } catch (err) {
+                alert('فشل في النسخ، يرجى المحاولة مرة أخرى');
+            }
+        });
+
+        // Form Submission
+        document.getElementById('verificationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('تم إرسال بيانات التحويل بنجاح! سيتم التواصل معك خلال 24 ساعة لنقل الملكية.');
+            this.reset();
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeInUp');
+                }
+            });
+        });
+
+        document.querySelectorAll('.card-hover').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>#### 5. Footer:
 - Content: "حقوق الملكية محفوظة © 2026 - Vision-Landing-Pro"
 
 ### Blackbox Output Request:
