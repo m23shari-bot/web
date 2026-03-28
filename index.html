@@ -2,39 +2,95 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>كريستيانو رونالدو | البدلة الرقمية الحصرية</title>
-    <!-- Tailwind CSS v2 CDN + Custom Luxury Overrides -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <!-- Google Fonts: Arabic + English Elegance -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بدلة كريستيانو الرقمية | Vision-Landing-Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        * {
-            font-family: 'Cairo', 'Segoe UI', system-ui, sans-serif;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
         body {
-            background-color: #000000;
-            scroll-behavior: smooth;
+            font-family: 'Cairo', sans-serif;
+            background-color: #050505;
+            color: #ffffff;
         }
-        /* Luxury gold accents & glow effects */
+        .gold-gradient {
+            background: linear-gradient(135deg, #D4AF37 0%, #f2d472 50%, #D4AF37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
         .gold-border {
-            border: 1px solid rgba(212, 175, 55, 0.4);
+            border: 1px solid #D4AF37;
+        }
+        .gold-bg {
+            background-color: #D4AF37;
+        }
+        .card-shadow {
             box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
-            transition: all 0.4s ease;
         }
-        .gold-border:hover {
-            border-color: #D4AF37;
-            box-shadow: 0 0 35px rgba(212, 175, 55, 0.4);
+    </style>
+</head>
+<body class="p-4 md:p-10 text-center">
+
+    <header class="mb-10 animate-fade-in">
+        <h1 class="text-4xl font-bold gold-gradient mb-4">الاستحواذ على الأسطورة</h1>
+        <p class="text-gray-400 text-lg">بدلة كريستيانو رونالدو الرقمية الحصرية (1-of-1)</p>
+    </header>
+
+    <main class="max-w-2xl mx-auto">
+        <div class="gold-border rounded-xl p-2 mb-8 card-shadow">
+            <div class="bg-zinc-900 h-64 rounded-lg flex items-center justify-center">
+                 <span class="text-gray-500">[ صورة البدلة الفاخرة هنا ]</span>
+            </div>
+        </div>
+
+        <section class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 mb-8">
+            <h2 class="text-xl font-bold mb-6 text-yellow-500">مركز الدفع الآمن</h2>
+            
+            <div class="text-right mb-4">
+                <span class="text-sm text-gray-400">شبكة الإيداع المعتمدة:</span>
+                <p class="font-bold text-white text-lg">USDT - TRC20</p>
+            </div>
+
+            <div class="bg-black p-4 rounded-lg border border-zinc-700 flex flex-col items-center gap-4">
+                <p class="text-xs text-gray-500">عنوان المحفظة الرسمي:</p>
+                <code id="walletAddress" class="text-sm md:text-base text-yellow-200 break-all">TRSf1jCUZ3yFjAKER3o5GEKPXxV4FPa7No</code>
+                
+                <button onclick="copyAddress()" id="copyBtn" class="gold-bg text-black font-bold py-2 px-8 rounded-full hover:bg-yellow-400 transition-all w-full">
+                    نسخ العنوان المباشر
+                </button>
+            </div>
+        </section>
+
+        <div class="text-sm text-gray-500 italic">
+            * بعد إتمام التحويل، سيتم التواصل معك عبر نظام Vision-Landing-Pro لتأكيد ملكية الأصل.
+        </div>
+    </main>
+
+    <footer class="mt-20 pt-10 border-t border-zinc-900">
+        <p class="text-gray-600 text-xs">حقوق الملكية محفوظة © 2026</p>
+        <p class="gold-gradient font-bold">Vision-Landing-Pro</p>
+    </footer>
+
+    <script>
+        function copyAddress() {
+            const address = "TRSf1jCUZ3yFjAKER3o5GEKPXxV4FPa7No";
+            navigator.clipboard.writeText(address).then(() => {
+                const btn = document.getElementById('copyBtn');
+                btn.innerText = "تم النسخ بنجاح! ✅";
+                btn.classList.remove('gold-bg');
+                btn.classList.add('bg-green-600', 'text-white');
+                
+                setTimeout(() => {
+                    btn.innerText = "نسخ العنوان المباشر";
+                    btn.classList.remove('bg-green-600', 'text-white');
+                    btn.classList.add('gold-bg', 'text-black');
+                }, 3000);
+            }).catch(err => {
+                alert("فشل النسخ، يرجى النسخ يدوياً");
+            });
         }
-        .gold-glow {
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
-        }
-        .gold-button {
-            background: linear-gradient(135deg, #D4AF37 0%, #B38F2A 100%);
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
-        }
-        .gold-button:hover {
+    </script>
+</body>
+</html>        .gold-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 12px 25px rgba(212, 175, 55, 0.5);
             filter: brightness(1.05);
