@@ -1,40 +1,75 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CR Elite Suit - كن الألفا</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<section class="offer-section" id="offer">
+    <h2>🔥 عرض محدود</h2><div class="offer-price">$199</div>
+<p style="font-size: 1.5rem; margin-bottom: 2rem;">
+    ادفع الآن عبر USDT (TRC20)
+</p>
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            color: #fff;
-            overflow-x: hidden;
-            background: #000;
-        }
+<!-- Wallet -->
+<div style="background:#111;padding:20px;border-radius:15px;margin-bottom:20px;">
+    <p style="color:gold;">عنوان المحفظة:</p>
+    <p id="wallet" style="word-break:break-all;">
+    TRSf1jCUZ3yFjAKER3o5GEKPXxV4FPa7No
+    </p>
+    <button onclick="copyWallet()" class="cta-hero" style="margin-top:10px;">
+        نسخ العنوان
+    </button>
+</div>
 
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23000000" width="1200" height="800"/><path fill="none" stroke="%23b8860b" stroke-width="1" opacity="0.1" d="M0,400 Q300,200 600,400 T1200,400"/></svg>');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            position: relative;
-        }
+<!-- Payment Form -->
+<div style="background:#111;padding:20px;border-radius:15px;">
+    <h3 style="color:gold;">تأكيد الدفع</h3>
 
+    <input type="text" id="name" placeholder="اسمك"
+    style="width:100%;padding:10px;margin:10px 0;">
+
+    <input type="text" id="txid" placeholder="رقم العملية (TXID)"
+    style="width:100%;padding:10px;margin:10px 0;">
+
+    <button onclick="submitOrder()" class="cta-order">
+        تأكيد الطلب
+    </button>
+</div>
+
+<div id="result" style="margin-top:15px;color:gold;"></div>
+
+</section><script>
+function copyWallet() {
+    const wallet = document.getElementById("wallet").innerText;
+    navigator.clipboard.writeText(wallet);
+    alert("تم نسخ عنوان المحفظة");
+}
+
+function submitOrder() {
+    let name = document.getElementById("name").value;
+    let txid = document.getElementById("txid").value;
+
+    if(name === "" || txid === ""){
+        alert("املأ جميع البيانات");
+        return;
+    }
+
+    // تخزين الطلب مؤقتًا (localStorage)
+    let orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+    let order = {
+        name: name,
+        txid: txid,
+        date: new Date().toLocaleString()
+    };
+
+    orders.push(order);
+    localStorage.setItem("orders", JSON.stringify(orders));
+
+    document.getElementById("result").innerText = "تم إرسال طلبك بنجاح ✅";
+
+    // إرسال لك على واتساب تلقائي
+    window.open(
+        "https://wa.me/967714515565?text=" +
+        "طلب جديد:%0Aالاسم: " + name +
+        "%0A TXID: " + txid
+    );
+}
+</script>
         .hero h1 {
             font-size: clamp(3rem, 8vw, 6rem);
             font-weight: 800;
